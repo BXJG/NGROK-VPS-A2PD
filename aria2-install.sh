@@ -28,7 +28,7 @@ ERROR="[${Red_font_prefix}ERROR${Font_color_suffix}]"
 PROJECT_NAME='Aria2 Pro Core'
 GH_API_URL='https://api.github.com/repos/P3TERX/Aria2-Pro-Core/releases/latest'
 BIN_DIR='/usr/local/bin'
-BIN_NAME='aria2c'
+BIN_NAME='a2c'
 BIN_FILE="${BIN_DIR}/${BIN_NAME}"
 
 if [[ $(uname -s) != Linux ]]; then
@@ -77,6 +77,7 @@ echo -e "${INFO} Download URL: ${DOWNLOAD_URL}"
 
 echo -e "${INFO} Installing ${PROJECT_NAME} ..."
 curl -LS "${DOWNLOAD_URL}" | tar xzC ${BIN_DIR}
+mv "${BIN_DIR}/aria2c" "${BIN_DIR}/a2c"
 chmod +x ${BIN_FILE}
 if [[ -s ${BIN_FILE} && $(${BIN_NAME} -v) ]]; then
     echo -e "${INFO} Done."
