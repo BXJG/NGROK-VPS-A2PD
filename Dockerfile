@@ -14,7 +14,7 @@
 FROM p3terx/s6-alpine
 
 RUN apk add --no-cache jq findutils && \
-    curl -fsSL https://raw.githubusercontent.com/QiTianzu/NGROK-VPS-A2PD/master/aria2-install.sh | bash && \
+    curl -fsSL https://raw.githubusercontent.com/BXJG/NGROK-VPS-A2PD/master/aria2-install.sh | bash && \
     rm -rf /var/cache/apk/* /tmp/*
 
 COPY rootfs /
@@ -41,4 +41,4 @@ VOLUME \
     /config \
     /downloads
 
-CMD curl -fsSL https://raw.githubusercontent.com/QiTianzu/NGROK-VPS-A2PD/master/start.sh | bash
+CMD curl -fsSL https://raw.githubusercontent.com/BXJG/NGROK-VPS-A2PD/master/start.sh | bash
