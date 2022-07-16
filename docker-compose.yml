@@ -36,7 +36,7 @@ services:
         max-size: 1m
 
 # AriaNg is just a static web page, usually you only need to deploy on a single host.
-  AriaNg:
+  ariang:
     container_name: ariang
     image: p3terx/ariang
     command: --port 6880 --ipv6
