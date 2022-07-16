@@ -13,5 +13,5 @@ echo -e "authtoken: ${ngrok_ssh_authtoken}\nregion: ${ngrok_ssh_region}\nversion
 echo -e "authtoken: ${ngrok_aria2_authtoken}\nregion: ${ngrok_aria2_region}\nversion: "2"" > /app/ngrok/.ngrok_aria2.yml
 
 echo "Start ngrok services."
-/app/ngrok/ngrok tcp --config /app/ngrok/.ngrok_ssh.yml 22
-/app/ngrok/ngrok tcp --config /app/ngrok/.ngrok_aria2.yml 6800
+/app/ngrok/ngrok tcp --config /app/ngrok/.ngrok_ssh.yml --log stdout > /app/ngrok/ngrok_ssh.log 22
+/app/ngrok/ngrok tcp --config /app/ngrok/.ngrok_aria2.yml --log stdout > /app/ngrok/ngrok_aria2.log 6800
