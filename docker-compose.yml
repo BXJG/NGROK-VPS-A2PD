@@ -18,8 +18,8 @@ services:
       - CUSTOM_TRACKER_URL=
       - TZ=Asia/Shanghai
     volumes:
-      - $PWD/aria2-config:/config
-      - $PWD/aria2-downloads:/downloads
+      - ${PWD}/aria2-config:/config
+      - ${PWD}/aria2-downloads:/downloads
 # If you use host network mode, then no port mapping is required.
 # This is the easiest way to use IPv6 networks.
     network_mode: host
