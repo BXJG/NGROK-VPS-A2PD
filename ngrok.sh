@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mkdir -p /app/ngrok
-wget -O /app/ngrok/ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+wget --no-check-certificate -O /app/ngrok/ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
 tar -zxvf /app/ngrok/ngrok.tgz -C /app/ngrok
 
 ngrok_ssh_authtoken="26C1mPxDCFYdnDeDHB2S3Oa2VCr_GrmMdG2vavc7ANoLjGt1"
