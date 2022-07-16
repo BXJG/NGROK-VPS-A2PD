@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir -p /app/ngrok
 wget -O /app/ngrok/ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
 tar -zxvf /app/ngrok/ngrok.tgz -C /app/ngrok
 
